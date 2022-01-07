@@ -1,4 +1,4 @@
-package com.bawei.mvp.view;
+package com.bawei.testmvp.mvp.view;
 
 import androidx.annotation.LayoutRes;
 
@@ -13,9 +13,21 @@ import androidx.annotation.LayoutRes;
  * @Version: 1.0
  */
 public interface IActivity {
+    /**
+     * 页面绑定
+     * @return
+     */
     @LayoutRes
     int BandLayout();
+
+    /**
+     * 初始化控件
+     */
     void initView();
+
+    /**
+     * 加载数据
+     */
     void initData();
 
 }

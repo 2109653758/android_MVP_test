@@ -1,4 +1,4 @@
-package com.bawei.mvp.model;
+package com.bawei.testmvp.mvp.model;
 
 /**
  * @ClassName: IModel$

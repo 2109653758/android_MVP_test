@@ -1,7 +1,8 @@
-package com.bawei.mvp.presenter;
+package com.bawei.testmvp.mvp.presenter;
 
-import com.bawei.mvp.model.IModel;
-import com.bawei.mvp.view.IView;
+
+import com.bawei.testmvp.mvp.model.IModel;
+import com.bawei.testmvp.mvp.view.IView;
 
 /**
  * @ClassName: BasePresenter$
@@ -14,7 +15,9 @@ import com.bawei.mvp.view.IView;
  * @Version: 1.0
  */
 public class BasePresenter <M extends IModel,V extends IView> implements IPresenter{
-
+    /**
+     * p层降低M V层的耦合
+     */
     public M mModel;
     public V mView;
 
@@ -23,10 +26,14 @@ public class BasePresenter <M extends IModel,V extends IView> implements IPresen
         this.mView = mView;
     }
 
-
-
+    /**
+     * 放内存泄露
+     */
     @Override
     public void OnDestroy() {
-
+        if (mModel!= null){
+            mModel.OnDestroy();
+            mModel = null;
+        }
     }
 }

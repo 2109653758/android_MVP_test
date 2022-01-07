@@ -1,4 +1,4 @@
-package com.bawei.mvp.presenter;
+package com.bawei.testmvp.mvp.presenter;
 
 /**
  * @ClassName: IModel$

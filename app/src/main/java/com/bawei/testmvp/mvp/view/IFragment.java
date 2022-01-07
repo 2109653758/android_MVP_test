@@ -1,4 +1,4 @@
-package com.bawei.mvp.view;
+package com.bawei.testmvp.mvp.view;
 
 import android.view.View;
 
@@ -15,5 +15,11 @@ import androidx.annotation.IdRes;
  * @Version: 1.0
  */
 public interface IFragment extends IActivity{
+    /**
+     * 控件初始化
+     * @param id
+     * @param <V>
+     * @return
+     */
     <V extends View> V findViewById(@IdRes int id);
 }
